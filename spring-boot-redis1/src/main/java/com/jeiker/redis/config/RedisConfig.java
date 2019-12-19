@@ -25,10 +25,15 @@ public class RedisConfig extends CachingConfigurerSupport {
         // 配置redisTemplate
         RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
         redisTemplate.setConnectionFactory(connectionFactory);
+        // String 序列化
         // key序列化
         redisTemplate.setKeySerializer(new StringRedisSerializer());
         // value序列化
         redisTemplate.setValueSerializer(new GenericJackson2JsonRedisSerializer());
+        // Hash序列化
+        redisTemplate.setHashKeySerializer(new StringRedisSerializer());
+        redisTemplate.setHashValueSerializer(new GenericJackson2JsonRedisSerializer());
+
         redisTemplate.afterPropertiesSet();
         return redisTemplate;
     }
