@@ -8,7 +8,7 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.stereotype.Component;
 
 /**
- * Description: spring-boot-redis1
+ * Description: 订阅者监听通道消息
  * User: jeikerxiao
  * Date: 2019-12-23 12:53
  */

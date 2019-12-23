@@ -9,7 +9,7 @@ import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 import org.springframework.data.redis.listener.adapter.MessageListenerAdapter;
 
 /**
- * Description: Redis 消息评阅配置
+ * Description: Redis 消息订阅配置
  * User: jeikerxiao
  * Date: 2019-12-23 12:56
  */
