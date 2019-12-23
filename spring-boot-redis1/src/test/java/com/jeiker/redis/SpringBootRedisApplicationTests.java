@@ -86,5 +86,8 @@ class SpringBootRedisApplicationTests {
         Assert.isTrue("2".equals(object), "hash put all 值不对。");
     }
 
-
+    @Test
+    public void testMq() {
+        redisTemplate.convertAndSend("demoChannel", "this message");
+    }
 }
